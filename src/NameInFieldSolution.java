@@ -26,7 +26,7 @@ public class NameInFieldSolution {
 		JPanel panel = new JPanel();
 		
 		// Create a text field.
-		JTextField textField = new JTextField(); 
+		JTextField textField = new JTextField(20); 
 		
 		// Create a label and add it to the panel.
 		JLabel label = new JLabel("Button not pressed.");

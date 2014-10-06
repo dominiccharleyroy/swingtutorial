@@ -1,12 +1,11 @@
-import java.awt.Color;
+import java.awt.GridLayout;
 
+import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 /**
- * An example of JPanels having multiple components - in this case,
- * we add five labels.
+ * An example of  a JPanel using the GridLayout layot manager.
  */
 public class GridLayoutExample {
 	public static void main(String[] args) {
@@ -17,10 +16,11 @@ public class GridLayoutExample {
 		
 		// Create our JPanel.
 		JPanel panel = new JPanel();
+		panel.setLayout(new GridLayout(3, 2));
 		
-		// Create 5 labels and add them to our panel.
-		for (int i = 0; i < 5; i++) {
-			panel.add(new JLabel("Label " + i));
+		// Create 6 labels and add them to our panel.
+		for (int i = 0; i < 6; i++) {
+			panel.add(new JButton("Button" + i));
 		}
 		
 		// Set it as the window's content pane and show the window.

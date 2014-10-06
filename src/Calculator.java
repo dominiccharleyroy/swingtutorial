@@ -23,7 +23,6 @@ public class Calculator {
 		
 		// Add a JTextField with the initial text "0" to the north.
 		container.add(new JTextField("0"), BorderLayout.NORTH);
-		
 
 		// Create a JPanel which will contain our buttons.
 		JPanel buttonContainer = new JPanel();

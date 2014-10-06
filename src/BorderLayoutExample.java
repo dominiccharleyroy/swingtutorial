@@ -1,12 +1,11 @@
-import java.awt.Color;
+import java.awt.BorderLayout;
 
+import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 /**
- * An example of JPanels having multiple components - in this case,
- * we add five labels.
+ * An example of a JPanel using the BorderLayout layout manager.
  */
 public class BorderLayoutExample {
 	public static void main(String[] args) {
@@ -17,11 +16,14 @@ public class BorderLayoutExample {
 		
 		// Create our JPanel.
 		JPanel panel = new JPanel();
+		panel.setLayout(new BorderLayout());
 		
-		// Create 5 labels and add them to our panel.
-		for (int i = 0; i < 5; i++) {
-			panel.add(new JLabel("Label " + i));
-		}
+		// Add a button to each section.
+		panel.add(new JButton("EAST"), BorderLayout.EAST);
+		panel.add(new JButton("NORTH"), BorderLayout.NORTH);
+		panel.add(new JButton("WEST"), BorderLayout.WEST);
+		panel.add(new JButton("SOUTH"), BorderLayout.SOUTH);
+		panel.add(new JButton("CENTER"));
 		
 		// Set it as the window's content pane and show the window.
 		window.add(panel);		
